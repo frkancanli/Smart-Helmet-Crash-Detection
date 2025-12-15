@@ -19,8 +19,9 @@ Sistem **Input - Process - Output** mantığı üzerine kuruludur:
 ## 📊 Sistem Akış Şeması
 Projenin çalışma mantığını gösteren blok diyagram:
 
-![Akış Şeması](sema.png)
-*(Buraya az önceki görseli yüklediğinde otomatik görünecek)*
+![Akış Şeması][kaza yapıldı mı.jpg]
+
+
 
 ## 💻 Kullanılan Teknolojiler
 * **Dil:** Python (Prototip aşaması)
