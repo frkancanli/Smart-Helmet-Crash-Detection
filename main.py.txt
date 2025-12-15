@@ -1,0 +1,57 @@
+import time
+import random
+
+def akilli_kask_simulasyonu_v2():
+    print("--- AKILLI KASK SİSTEMİ (V2) BAŞLATILIYOR ---")
+    time.sleep(1)
+    print("Sensörler: AKTİF")
+    print("----------------------------------------")
+    
+    try:
+        while True:
+            # 1. Sensör Verisi (Input Simülasyonu)
+            g_kuvveti = round(random.uniform(0.5, 2.0), 2)
+            
+            # Rastgele kaza senaryosu üret (%5 ihtimal)
+            if random.randint(1, 20) == 1:
+                g_kuvveti = round(random.uniform(6.0, 10.0), 2)
+
+            # 2. Karar Mekanizması (Process)
+            if g_kuvveti > 5.0:
+                print(f"\n⚠️ DARBE ALGILANDI! (G-Kuvveti: {g_kuvveti}g)")
+                
+                # --- BURASI YENİ EKLENDİ ---
+                
+                # INPUT: Kullanıcıya soru soruyoruz
+                print(">> ACİL YARDIM ÇAĞRILACAK! İPTAL ETMEK İSTİYOR MUSUNUZ?")
+                cevap = input(">> Sürücü iyi misin? (e/h): ") 
+                
+                # PROCESS: Girilen cevabı kontrol ediyoruz
+                # cevap.lower() komutu, büyük 'E' yazsan bile onu küçük 'e'ye çevirir, hata olmaz.
+                if cevap.lower() == 'e':
+                    # OUTPUT A: Sürücü iyi
+                    print(">> Sürücü: 'İyiyim' dedi.")
+                    print(">> 112 Araması İPTAL EDİLDİ. Güvenli sürüşler.")
+                    print("-" * 30)
+                else:
+                    # OUTPUT B: Sürücü kötü veya cevap vermedi
+                    print(">> Cevap 'Hayır' veya anlamsız.")
+                    print(">> KONUM ALINIYOR... (40.7750 N, 30.3680 E)")
+                    print(">> 112 ARANIYOR... 🚑")
+                    print("-" * 30)
+                    # Gerçek bir kazada sistem burada durabilir veya beklemeye geçebilir
+                    break 
+                
+                time.sleep(2)
+            
+            else:
+                # Kaza yoksa normal akış
+                print(f"Durum: Normal Sürüş | G-Kuvveti: {g_kuvveti}g")
+            
+            time.sleep(1)
+
+    except KeyboardInterrupt:
+        print("\nSistem Kapatıldı.")
+
+# Programı çalıştır
+akilli_kask_simulasyonu_v2()
