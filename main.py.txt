@@ -2,7 +2,7 @@ import time
 import random
 
 def akilli_kask_simulasyonu_v2():
-    print("--- AKILLI KASK SİSTEMİ (V2) BAŞLATILIYOR ---")
+    print("--- AKILLI KASK SİSTEMİ BAŞLATILIYOR ---")
     time.sleep(1)
     print("Sensörler: AKTİF")
     print("----------------------------------------")
@@ -19,9 +19,7 @@ def akilli_kask_simulasyonu_v2():
             # 2. Karar Mekanizması (Process)
             if g_kuvveti > 5.0:
                 print(f"\n⚠️ DARBE ALGILANDI! (G-Kuvveti: {g_kuvveti}g)")
-                
-                # --- BURASI YENİ EKLENDİ ---
-                
+                             
                 # INPUT: Kullanıcıya soru soruyoruz
                 print(">> ACİL YARDIM ÇAĞRILACAK! İPTAL ETMEK İSTİYOR MUSUNUZ?")
                 cevap = input(">> Sürücü iyi misin? (e/h): ") 
@@ -54,4 +52,4 @@ def akilli_kask_simulasyonu_v2():
         print("\nSistem Kapatıldı.")
 
 # Programı çalıştır
-akilli_kask_simulasyonu_v2()
+
